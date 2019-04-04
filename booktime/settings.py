@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'booktime.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
+        'NAME': 'booktime',
         'USER': 'postgres',
-        'PASSWORD': 'ali123',
+        'PASSWORD': '00000',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
@@ -138,3 +138,7 @@ else:
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+AUTH_USER_MODEL = "main.User"
+
+LOGIN_REDIRECT_URL = "/"
